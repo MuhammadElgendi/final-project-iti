@@ -1,7 +1,7 @@
 # Deploy backend application on eks using ci-cd Jenkins pipeline
 ## clone the repo via command 
 ```bash
-Git clone 
+Git clone https://github.com/Gendi97/final-project-iti.git
 ```
 ## cd the terraform code folder
 ```bash
