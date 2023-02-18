@@ -54,48 +54,6 @@ kubectl apply -n jenkins -f rbac.yaml       #create service acount and binding r
 kubectl apply -n jenkins -f deploy.yaml     #create deployment for jenkins
 kubectl apply -n jenkins -f service     #create service loadbalancer for jenkins deployment
 
-kubectl apply -n jenkins -f SERVICE FILE pipeline {
-    agent any
-
-
-    stages {
-        stage('cloning repo') {
-            steps {
-             withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
-
-                // Get some code from a GitHub repository
-                git 'https://github.com/Gendi97/bakehouse-app.git'}
-
-            }
-
-
-        }
-        stage('build image') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
-                sh """
-                docker build . -t gendi97/app:v12 -f Dockerfile
-                docker login -u ${USERNAME} -p ${PASSWORD}
-                docker push gendi97/app:v12
-                """
-                }
-
-            }
-
-
-        }
-        stage('deploy app') {
-            steps{
-                  sh """
-                  kubectl create ns app
-                  kubectl apply -f deploy.yaml -n app
-                  kubectl apply -f service.yaml -n app
-                  """
-            }
-
-        }
-    }
-}
 ```
 ## Jenkins Initial Setup
 ```bash
