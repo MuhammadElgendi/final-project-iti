@@ -61,12 +61,12 @@ kubectl -n jenkins exec -it pod/POD_NAME cat /var/jenkins_home/secrets/initialAd
 ```
 ## pipline steps
 ![Screenshot from 2023-02-18 23-01-43](https://user-images.githubusercontent.com/107524115/219899386-13014be7-2c6f-40d4-865a-3fb8f368a548.png)
+![Screenshot from 2023-02-18 23-04-41](https://user-images.githubusercontent.com/107524115/219900766-56fbff0c-5dfb-4a27-9b27-0995c5ed2539.png)
 
-  file:///home/gendi/Pictures/Screenshots/Screenshot%20from%202023-02-18%2023-04-41.png
-## deployed app
 
- file:///home/gendi/Pictures/Screenshots/Screenshot%20from%202023-02-18%2022-54-00.png
+## image on dockerhub
 
+ file:///home/gendi/Pictures/Screenshots/Screenshot%20from%202023-02-18%2023-19-06.png
 
 
 
