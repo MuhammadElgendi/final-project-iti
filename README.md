@@ -68,4 +68,6 @@ kubectl -n jenkins exec -it pod/POD_NAME cat /var/jenkins_home/secrets/initialAd
 # image on dockerhub
 ![Screenshot from 2023-02-18 23-45-51](https://user-images.githubusercontent.com/107524115/219900854-55b27f57-07c0-46cc-82cf-0b78a661730c.png)
 
- 
+# the deployed app
+![Screenshot from 2023-02-18 23-46-54](https://user-images.githubusercontent.com/107524115/219900935-d197c4ed-8a29-4ea6-a46b-abb080ee7d34.png)
+
