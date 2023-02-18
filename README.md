@@ -64,10 +64,8 @@ kubectl -n jenkins exec -it pod/POD_NAME cat /var/jenkins_home/secrets/initialAd
 ![Screenshot from 2023-02-18 23-04-41](https://user-images.githubusercontent.com/107524115/219900766-56fbff0c-5dfb-4a27-9b27-0995c5ed2539.png)
 
 
-## image on dockerhub
 
- file:///home/gendi/Pictures/Screenshots/Screenshot%20from%202023-02-18%2023-19-06.png
-
-
+# image on dockerhub
+![Screenshot from 2023-02-18 23-45-51](https://user-images.githubusercontent.com/107524115/219900854-55b27f57-07c0-46cc-82cf-0b78a661730c.png)
 
  
