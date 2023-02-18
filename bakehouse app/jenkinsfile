@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+
+    stages {
+        stage('cloning repo') {
+            steps {
+             withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
+
+                // Get some code from a GitHub repository
+                git 'https://github.com/Gendi97/bakehouse-app.git'}
+
+            }
+
+
+        }
+        stage('build image') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
+                sh """
+                docker build . -t gendi97/app:v12 -f Dockerfile
+                docker login -u ${USERNAME} -p ${PASSWORD}
+                docker push gendi97/app:v12
+                """
+                }
+
+            }
+
+
+        }
+        stage('deploy app') {
+            steps{
+                  sh """
+                  kubectl create ns app
+                  kubectl apply -f deploy.yaml -n app
+                  kubectl apply -f service.yaml -n app
+                  """
+            }
+
+        }
+    }
+}
