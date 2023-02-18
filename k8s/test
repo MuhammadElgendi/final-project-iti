@@ -1,0 +1,51 @@
+vpc-09eab7a89612fa3cb
+10.0.0.0/16
+
+{
+    "GroupId": "sg-001161379f6fa37fb"
+}
+{
+    "Return": true,
+    "SecurityGroupRules": [
+        {
+            "SecurityGroupRuleId": "sgr-0fea4d8e27d3b8c50",
+            "GroupId": "sg-001161379f6fa37fb",
+            "GroupOwnerId": "101315813559",
+            "IsEgress": false,
+            "IpProtocol": "tcp",
+            "FromPort": 2049,
+            "ToPort": 2049,
+            "CidrIpv4": "10.0.0.0/16"
+        }
+    ]
+}
+{
+    "OwnerId": "101315813559",
+    "CreationToken": "eks-efs",
+    "FileSystemId": "fs-0706be8946f71ae1b",
+    "FileSystemArn": "arn:aws:elasticfilesystem:us-east-1:101315813559:file-system/fs-0706be8946f71ae1b",
+    "CreationTime": "2023-02-17T23:52:02+02:00",
+    "LifeCycleState": "creating",
+    "NumberOfMountTargets": 0,
+    "SizeInBytes": {
+        "Value": 0,
+        "ValueInIA": 0,
+        "ValueInStandard": 0
+    },
+    "PerformanceMode": "generalPurpose",
+    "Encrypted": false,
+    "ThroughputMode": "bursting",
+    "Tags": []
+:
+{
+    "OwnerId": "101315813559",
+    "MountTargetId": "fsmt-0579c380488ec84ec",
+    "FileSystemId": "fs-0706be8946f71ae1b",
+    "SubnetId": "subnet-094fbc54b24c23eba",
+    "LifeCycleState": "creating",
+    "IpAddress": "10.0.2.69",
+    "NetworkInterfaceId": "eni-0e17b57f9cf45d7e8",
+    "AvailabilityZoneId": "use1-az2",
+    "AvailabilityZoneName": "us-east-1a",
+    "VpcId": "vpc-09eab7a89612fa3cb"
+}
