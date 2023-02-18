@@ -48,16 +48,14 @@ kubectl create ns jenkins
 
 ## Deploy Jenkins
 ```bash
-# rbac
-kubectl apply -n jenkins -f jenkins.rbac.yaml 
-
-kubectl apply -n jenkins -f jenkins.deployment.yaml
-
-kubectl -n jenkins get pods
-
+kubectl apply -n jenkins -f PV FILE 
+kubectl apply -n jenkins -f PVC FILE 
+kubectl apply -n jenkins -f RBAC FILE 
+kubectl apply -n jenkins -f DEPLOY FILE
+kubectl apply -n jenkins -f SERVICE FILE 
 ```
-
-## Expose a service for agents
+## Jenkins Initial Setup
 ```bash
-kubectl apply -n jenkins -f jenkins.service.yaml 
+kubectl -n jenkins exec -it pod/POD_NAME cat /var/jenkins_home/secrets/initialAdminPassword
 ```
+
